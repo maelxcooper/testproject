@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fugaz+One&display=swap");
+
+:root {
+  --priFont: "Source Sans 3", serif;
+  --bodyFont: "DM Sans", sans-serif;
+  --styleFont: "Fugaz One", cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--bodyFont);
+}
+
+h2 {
+  font-family: var(--styleFont);
+  color: #47cebb;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  width: min(100%, 1400px);
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.bullet {
+  list-style-type: none;
+}
+.bullet li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  line-height: 26px;
+}
+.bullet li::before {
+  content: "\f1bb";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  font-style: normal;
+  font-family: "FontAwesome" !important;
+  font-variant: normal;
+  line-height: 1;
+  color: #47cebb;
+}
+
+.bullet li span {
+  color: #47cebb;
+  font-weight: 700;
+}
+
+.park-head {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.park-head h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: bold;
+  font-family: var(--styleFont);
+  color: #47cebb;
+  text-shadow: 0.1em 0.1em 0 hsl(195, 2%, 40%);
+}
+
+.park-head img {
+  width: 96px;
+}
+
+.park-map iframe {
+  width: 600px;
+  height: 450px;
+  border: none;
+  border-radius: 8px;
+}
+
+.park-con {
+  padding: 3em 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
+}
+div.accordion {
+  margin: 40px 0;
+  clear: both;
+}
+
+div.accordion section {
+  margin: 40px 0;
+}
+
+div.accordion section h4 {
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: bold;
+  font-family: var(--priFont);
+  margin-bottom: 10px;
+}
+.accordion .toggle-bx {
+  clear: both;
+  border: 1px solid #dfdfdf;
+  padding: 10px 0;
+  border-radius: 4px;
+}
+
+div.toggle-bx h3 {
+  padding-left: 20px;
+  color: #000;
+  margin: 0 0 5px;
+  cursor: pointer;
+  line-height: 35px;
+  position: relative;
+  font-size: 18px;
+}
+div.toggle-bx h3 span {
+  display: block;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: var(--priFont);
+}
+div.toggle-bx div {
+  display: none;
+  background: #fafdfe;
+  padding: 20px 10px 20px 30px;
+  margin: 5px 0;
+  position: relative;
+}
+div.toggle-bx h3:before {
+  content: "\f107";
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  font-family: "FontAwesome";
+}
+div.toggle-bx .sign:before {
+  content: "\f106" !important;
+  line-height: 25px;
+  font-family: "FontAwesome";
+}
+
+.park-summary {
+  text-align: center;
+}
+
+.park-summary > div {
+  margin: 2em 0;
+}
+
+.park-summary > div h2 {
+  text-align: left;
+  color: #000;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgb(100, 116, 139, 1);
+}
+
+.park-summary > div .long-txt {
+  display: none;
+}
+
+.park-summary > div a {
+  display: block;
+  background: #000cff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fff;
+  margin: 20px auto 0;
+  width: min(120px, 100%);
+}
+.park-summary > div a.read-less {
+  display: none;
+}
+
+.media-con {
+  text-align: center;
+}
+
+.media-con > section h2 {
+  font-size: clamp(24px, 4vw, 40px);
+  margin-bottom: 12px;
+}
+
+.media-con .photo img {
+  width: 600px;
+}
+
+.media-con .video iframe {
+  width: 650px;
+  height: 400px;
+}
+
+@media screen and (max-width: 1400px) {
+  .park-map iframe {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .park-con {
+    grid-template-columns: 1fr;
+  }
+  .park-map iframe {
+    width: 100%;
+  }
+
+  .park-summary > div h2 {
+    text-align: center;
+  }
+}
