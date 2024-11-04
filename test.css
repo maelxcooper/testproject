@@ -98,7 +98,7 @@ main {
 }
 
 .park-map iframe {
-  width: min(600px,100%);
+  width: 100%;
   height: 450px;
   border: none;
   border-radius: 8px;
@@ -107,7 +107,7 @@ main {
 .park-con {
   padding: 3em 0;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2em;
 }
 div.accordion {
@@ -227,19 +227,13 @@ div.toggle-bx .sign:before {
   height: 400px;
 }
 
-@media screen and (max-width: 1400px) {
-  .park-map iframe {
-    width: 400px;
-  }
-}
+
 
 @media screen and (max-width: 1000px) {
   .park-con {
     grid-template-columns: 1fr;
   }
-  .park-map iframe {
-    width: 100%;
-  }
+
 
   .park-summary > div h2 {
     text-align: center;
