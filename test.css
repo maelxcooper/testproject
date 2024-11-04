@@ -181,6 +181,7 @@ div.toggle-bx .sign:before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
+  margin: 4em 0;
 }
 
 .park-summary .summary-box {
