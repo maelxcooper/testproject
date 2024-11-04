@@ -20,10 +20,16 @@
   image-rendering: -webkit-optimize-contrast;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
 body {
   width: 100%;
   min-height: 100%;
   font-family: var(--bodyFont);
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 h2 {
@@ -217,7 +223,7 @@ div.toggle-bx .sign:before {
 }
 
 .media-con .video iframe {
-  width: 650px;
+  width: min(650px,100%);
   height: 400px;
 }
 
