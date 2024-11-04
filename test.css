@@ -92,7 +92,7 @@ main {
 }
 
 .park-map iframe {
-  width: 600px;
+  width: min(600px,100%);
   height: 450px;
   border: none;
   border-radius: 8px;
