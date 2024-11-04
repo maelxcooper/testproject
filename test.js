@@ -7,14 +7,14 @@ $(document).ready(function () {
   });
 
   $(".read-more").on("click", function () {
-    const $content = $(this).closest(".park-summary div");
+    const $content = $(this).closest(".summary-box");
     $content.find(".long-txt").slideDown();
     $(this).hide();
     $content.find(".read-less").css("display", "block");
   });
 
   $(".read-less").on("click", function () {
-    const $content = $(this).closest(".park-summary div");
+    const $content = $(this).closest(".summary-box");
     $content.find(".long-txt").slideUp();
     $(this).hide();
     $content.find(".read-more").css("display", "block");
